@@ -59,8 +59,27 @@ def git(*args):
     subprocess.run(["git", *args], check=True, cwd=ROOT)
 
 
+def pulizia(now):
+    """Dopo 30 giorni dalla pubblicazione tiene solo esito.json e info.json."""
+    changed = False
+    for d in sorted((ROOT / "pubblicati").glob("*/esito.json")):
+        quando = datetime.fromisoformat(json.loads(d.read_text())["pubblicato_alle"])
+        if (now - quando).days >= 30:
+            for f in d.parent.iterdir():
+                if f.name not in ("esito.json", "info.json"):
+                    f.unlink()
+                    changed = True
+    return changed
+
+
 def main():
     now = datetime.now(TZ)
+    if pulizia(now):
+        git("config", "user.name", "rione-bot")
+        git("config", "user.email", "rione-bot@users.noreply.github.com")
+        git("add", "-A", "pubblicati")
+        git("commit", "-m", "Pulizia post pubblicati da oltre 30 giorni")
+        git("push")
     day = now.strftime("%Y-%m-%d")
     folder = ROOT / "coda" / day
     if not folder.is_dir():
