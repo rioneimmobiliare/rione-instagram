@@ -1,0 +1,2 @@
+Carica qui gli zip dei post (Rione_Post_NN_JPEG.zip).
+Vengono preparati, messi in coda e poi tolti da qui in automatico.
