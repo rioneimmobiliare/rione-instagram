@@ -8,7 +8,7 @@ Struttura attesa:
 
 Segreti / variabili (GitHub > Settings > Secrets and variables > Actions):
   IG_TOKEN    (secret)    token dell'utente di sistema Meta
-  IG_USER_ID  (variable)  ID dell'account Instagram di Rione
+  account.json            ID dell'account Instagram di Rione
 """
 import json
 import os
@@ -86,7 +86,7 @@ def main():
     repo = os.environ["GITHUB_REPOSITORY"]
     sha = os.environ["GITHUB_SHA"]
     url = lambda p: f"https://raw.githubusercontent.com/{repo}/{sha}/coda/{day}/{urllib.parse.quote(p.name)}"
-    ig = os.environ["IG_USER_ID"]
+    ig = os.environ.get("IG_USER_ID") or json.loads((ROOT / "account.json").read_text())["ig_user_id"]
 
     if len(images) == 1:
         c = call("POST", f"{ig}/media", image_url=url(images[0]), caption=caption)["id"]

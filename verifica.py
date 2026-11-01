@@ -29,6 +29,8 @@ show("Utente del token", me)
 candidates = set()
 if os.environ.get("IG_USER_ID"):
     candidates.add(os.environ["IG_USER_ID"])
+if os.path.exists("account.json"):
+    candidates.add(json.load(open("account.json"))["ig_user_id"])
 
 pages = get("me/accounts", fields="name,instagram_business_account{id,username}")
 show("Pagine collegate", pages)
