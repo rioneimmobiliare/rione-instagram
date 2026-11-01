@@ -1,0 +1,28 @@
+name: Pubblica post del giorno
+
+on:
+  schedule:
+    # ogni 30 minuti; lo script decide se è l'ora giusta (fuso Europe/Rome)
+    - cron: "5,35 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pubblica
+  cancel-in-progress: false
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pubblica se è il momento
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ vars.IG_USER_ID }}
+        run: python pubblica.py
