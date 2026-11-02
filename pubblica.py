@@ -4,6 +4,8 @@ Struttura attesa:
   coda/AAAA-MM-GG/01.jpg, 02.jpg, ...   (JPEG, 1080x1350, in ordine)
   coda/AAAA-MM-GG/descrizione.txt       (la didascalia)
   coda/AAAA-MM-GG/STOP                  (facoltativo: se c'è, il post NON esce)
+  coda/AAAA-MM-GG/TENTATIVO_FALLITO.txt (creato dallo script se Instagram rifiuta:
+                                         blocca i nuovi tentativi; cancellalo per riprovare)
   orari.json                            (ora di uscita per giorno della settimana)
 
 Segreti / variabili (GitHub > Settings > Secrets and variables > Actions):
@@ -28,6 +30,12 @@ TZ = ZoneInfo("Europe/Rome")
 ROOT = Path(__file__).resolve().parent
 
 
+class ApiError(Exception):
+    def __init__(self, status, path, body):
+        super().__init__(f"Errore API {status} su {path}: {body}")
+        self.status, self.path, self.body = status, path, body
+
+
 def call(method, path, **params):
     params["access_token"] = os.environ["IG_TOKEN"]
     data = urllib.parse.urlencode(params).encode()
@@ -40,7 +48,7 @@ def call(method, path, **params):
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
         body = e.read().decode(errors="replace")
-        raise SystemExit(f"Errore API {e.code} su {path}: {body}")
+        raise ApiError(e.code, path, body)
 
 
 def wait_ready(container_id):
@@ -59,6 +67,50 @@ def git(*args):
     subprocess.run(["git", *args], check=True, cwd=ROOT)
 
 
+def salva(paths, msg):
+    git("config", "user.name", "rione-bot")
+    git("config", "user.email", "rione-bot@users.noreply.github.com")
+    git("add", "-A", *paths)
+    git("commit", "-m", msg)
+    for _ in range(3):
+        try:
+            git("push")
+            return
+        except subprocess.CalledProcessError:
+            git("pull", "--rebase")
+    git("push")
+
+
+def _norm(t):
+    return " ".join((t or "").split())
+
+
+def gia_pubblicato(ig, caption, dopo):
+    """Cerca tra gli ultimi post dell'account uno con la stessa didascalia,
+    uscito dopo `dopo`. Restituisce (media_id, permalink) oppure None."""
+    try:
+        recenti = call("GET", f"{ig}/media", fields="id,caption,timestamp,permalink", limit=10)
+    except ApiError as e:
+        print(f"Impossibile controllare i post recenti: {e}")
+        return None
+    for m in recenti.get("data", []):
+        quando = datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
+        if quando >= dopo and _norm(m.get("caption")) == _norm(caption):
+            return m["id"], m.get("permalink", "")
+    return None
+
+
+def archivia(folder, day, media_id, link, quando, nota=None):
+    dest = ROOT / "pubblicati" / day
+    dest.parent.mkdir(exist_ok=True)
+    shutil.move(str(folder), str(dest))
+    esito = {"media_id": media_id, "permalink": link, "pubblicato_alle": quando.isoformat()}
+    if nota:
+        esito["nota"] = nota
+    (dest / "esito.json").write_text(json.dumps(esito, indent=2, ensure_ascii=False))
+    salva(["coda", "pubblicati"], f"Pubblicato post del {day}")
+
+
 def pulizia(now):
     """Dopo 30 giorni dalla pubblicazione tiene solo esito.json e info.json."""
     changed = False
@@ -75,11 +127,7 @@ def pulizia(now):
 def main():
     now = datetime.now(TZ)
     if pulizia(now):
-        git("config", "user.name", "rione-bot")
-        git("config", "user.email", "rione-bot@users.noreply.github.com")
-        git("add", "-A", "pubblicati")
-        git("commit", "-m", "Pulizia post pubblicati da oltre 30 giorni")
-        git("push")
+        salva(["pubblicati"], "Pulizia post pubblicati da oltre 30 giorni")
     day = now.strftime("%Y-%m-%d")
     folder = ROOT / "coda" / day
     if not folder.is_dir():
@@ -87,6 +135,11 @@ def main():
         return
     if (folder / "STOP").exists():
         print(f"Post del {day} fermato (file STOP presente).")
+        return
+    fallito = folder / "TENTATIVO_FALLITO.txt"
+    if fallito.exists():
+        print(f"Post del {day}: un tentativo è già fallito, non riprovo da solo "
+              f"(cancella {fallito.name} per riprovare).\n" + fallito.read_text(encoding="utf-8"))
         return
 
     orari = json.loads((ROOT / "orari.json").read_text())
@@ -107,33 +160,46 @@ def main():
     url = lambda p: f"https://raw.githubusercontent.com/{repo}/{sha}/coda/{day}/{urllib.parse.quote(p.name)}"
     ig = os.environ.get("IG_USER_ID") or json.loads((ROOT / "account.json").read_text())["ig_user_id"]
 
-    if len(images) == 1:
-        c = call("POST", f"{ig}/media", image_url=url(images[0]), caption=caption)["id"]
-    else:
-        children = []
-        for p in images:
-            cid = call("POST", f"{ig}/media", image_url=url(p), is_carousel_item="true")["id"]
-            wait_ready(cid)
-            children.append(cid)
-        c = call("POST", f"{ig}/media", media_type="CAROUSEL",
-                 children=",".join(children), caption=caption)["id"]
-    wait_ready(c)
-    media_id = call("POST", f"{ig}/media_publish", creation_id=c)["id"]
-    link = call("GET", media_id, fields="permalink").get("permalink", "")
+    # Il post potrebbe essere già uscito (es. errore dopo la pubblicazione o push fallito):
+    # in quel caso lo registro e basta, senza ripubblicarlo.
+    inizio_giorno = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    trovato = gia_pubblicato(ig, caption, inizio_giorno)
+    if trovato:
+        print(f"Il post del {day} risulta già pubblicato: {trovato[1]} — lo registro senza ripubblicarlo.")
+        archivia(folder, day, trovato[0], trovato[1], now, nota="trovato già pubblicato")
+        return
+
+    try:
+        if len(images) == 1:
+            c = call("POST", f"{ig}/media", image_url=url(images[0]), caption=caption)["id"]
+        else:
+            children = []
+            for p in images:
+                cid = call("POST", f"{ig}/media", image_url=url(p), is_carousel_item="true")["id"]
+                wait_ready(cid)
+                children.append(cid)
+            c = call("POST", f"{ig}/media", media_type="CAROUSEL",
+                     children=",".join(children), caption=caption)["id"]
+        wait_ready(c)
+        media_id = call("POST", f"{ig}/media_publish", creation_id=c)["id"]
+        link = call("GET", media_id, fields="permalink").get("permalink", "")
+    except ApiError as e:
+        # Instagram a volte pubblica comunque e risponde con errore: aspetto e controllo.
+        time.sleep(20)
+        trovato = gia_pubblicato(ig, caption, inizio_giorno)
+        if trovato:
+            print(f"Instagram ha risposto con errore ma il post è uscito: {trovato[1]}\n({e})")
+            archivia(folder, day, trovato[0], trovato[1], now,
+                     nota=f"pubblicato nonostante errore API: {e}")
+            return
+        # Non è uscito: blocco i nuovi tentativi automatici per non insistere con Instagram.
+        (folder / "TENTATIVO_FALLITO.txt").write_text(
+            f"{now:%Y-%m-%d %H:%M} — {e}\n", encoding="utf-8")
+        salva(["coda"], f"Tentativo fallito per il post del {day}")
+        raise SystemExit(str(e))
+
     print(f"Pubblicato: {link}")
-
-    dest = ROOT / "pubblicati" / day
-    dest.parent.mkdir(exist_ok=True)
-    shutil.move(str(folder), str(dest))
-    (dest / "esito.json").write_text(json.dumps(
-        {"media_id": media_id, "permalink": link, "pubblicato_alle": now.isoformat()},
-        indent=2, ensure_ascii=False))
-    git("config", "user.name", "rione-bot")
-    git("config", "user.email", "rione-bot@users.noreply.github.com")
-    git("add", "-A", "coda", "pubblicati")
-    git("commit", "-m", f"Pubblicato post del {day}")
-    git("push")
-
+    archivia(folder, day, media_id, link, now)
 
 if __name__ == "__main__":
     main()
