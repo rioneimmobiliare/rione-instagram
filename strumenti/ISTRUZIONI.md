@@ -32,7 +32,7 @@ Usare come modello `strumenti/esempio_descrizione.txt`. Struttura:
 Non inventare dati, cifre o promesse; restare fedeli ai testi delle slide. Max 2200 caratteri.
 
 ## Messa in coda
-- Un post al giorno, in ordine di numero, a partire dal giorno dopo l'ultima data presente in `coda/` o `pubblicati/` (mai prima di domani).
+- Un post ogni 2 giorni, in ordine di numero: il primo 2 giorni dopo l'ultima data presente in `coda/` o `pubblicati/` (mai prima di domani), poi un giorno sì e uno no.
 - Cartella `coda/AAAA-MM-GG/` con `01.jpg, 02.jpg, …`, `descrizione.txt`, `info.json` `{"post": NN}`.
 - Aggiungere il post a `registro.json` con `drive_ids` (zip o cartella) e `data`.
 - Se un post ha un problema non risolvibile (slide mancanti, conti che non tornano, testo incoerente): NON metterlo in coda, saltarlo e avvisare.

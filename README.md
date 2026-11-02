@@ -7,4 +7,4 @@
 - Azione **Pubblica post del giorno** – gira ogni 30 minuti e pubblica quando è l'ora.
 - Azione **Verifica collegamento** – test manuale, non pubblica nulla.
 
-Per pubblicare ogni 2 giorni basta lasciare vuoti i giorni intermedi nella coda.
+Per ora si pubblica un giorno sì e uno no: i giorni intermedi restano vuoti nella coda.
