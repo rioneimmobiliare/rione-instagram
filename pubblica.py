@@ -28,6 +28,7 @@ from zoneinfo import ZoneInfo
 API = "https://graph.facebook.com/v23.0"
 TZ = ZoneInfo("Europe/Rome")
 ROOT = Path(__file__).resolve().parent
+ANTICIPO_MAX = 2 * 60 * 60  # secondi
 
 
 class ApiError(Exception):
@@ -145,8 +146,19 @@ def main():
     orari = json.loads((ROOT / "orari.json").read_text())
     hh, mm = map(int, orari[str(now.weekday())].split(":"))
     if (now.hour, now.minute) < (hh, mm):
-        print(f"Post del {day} previsto alle {hh:02d}:{mm:02d}, ora sono le {now:%H:%M}.")
-        return
+        target = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
+        attesa = (target - now).total_seconds()
+        # GitHub avvia i controlli programmati anche con un'ora di ritardo:
+        # parto in anticipo (fino a 2 ore prima) e aspetto qui l'orario esatto.
+        if attesa > ANTICIPO_MAX:
+            print(f"Post del {day} previsto alle {hh:02d}:{mm:02d}, ora sono le {now:%H:%M}.")
+            return
+        print(f"Post del {day} previsto alle {hh:02d}:{mm:02d}: attendo {attesa / 60:.0f} minuti.")
+        time.sleep(attesa)
+        now = datetime.now(TZ)
+        if not folder.is_dir() or (folder / "STOP").exists():
+            print("Post rimosso o fermato durante l'attesa.")
+            return
 
     images = sorted(p for p in folder.iterdir() if p.suffix.lower() in (".jpg", ".jpeg"))
     if not images or len(images) > 10:

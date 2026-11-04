@@ -2,8 +2,9 @@ name: Pubblica post del giorno
 
 on:
   schedule:
-    # ogni 30 minuti; lo script decide se è l'ora giusta (fuso Europe/Rome)
-    - cron: "5,35 * * * *"
+    # ogni 10 minuti tra le 6 e le 19 UTC; lo script parte fino a 2 ore prima
+    # dell'orario e aspetta, così i ritardi di GitHub non fanno saltare il post
+    - cron: "*/10 6-19 * * *"
   workflow_dispatch:
 
 permissions:
@@ -16,8 +17,11 @@ concurrency:
 jobs:
   pubblica:
     runs-on: ubuntu-latest
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
+      - name: Allinea all'ultima versione della coda
+        run: git pull --ff-only origin main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
