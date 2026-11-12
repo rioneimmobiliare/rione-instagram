@@ -1,0 +1,34 @@
+name: Raccogli Insights (non pubblica)
+
+on:
+  schedule:
+    # ogni venerdì sera (22:00 italiane in inverno): i dati sono pronti per il report del sabato
+    - cron: "0 21 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  insights:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scarica gli Insights
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ vars.IG_USER_ID }}
+        run: python insights.py
+      - name: Salva nel repository
+        run: |
+          git config user.name "rione-bot"
+          git config user.email "rione-bot@users.noreply.github.com"
+          git add insights/
+          git commit -m "Insights del $(TZ=Europe/Rome date +%Y-%m-%d)" || exit 0
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && break
+            sleep 10
+          done
