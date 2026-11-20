@@ -1,0 +1,821 @@
+{
+  "raccolto_il": "2026-11-20T22:38:30.286584+01:00",
+  "account_id": "17841423536549079",
+  "profilo": {
+    "id": "17841423536549079",
+    "followers_count": 3,
+    "follows_count": 0,
+    "media_count": 26,
+    "username": "rione.immobiliare"
+  },
+  "account_giornaliero": {
+    "reach": [
+      {
+        "giorno": "2026-10-24",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-10-25",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-10-26",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-10-27",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-10-28",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-10-29",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-10-30",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-10-31",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-01",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-11-02",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-03",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-04",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-05",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-06",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-07",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-08",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-09",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-10",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-11",
+        "valore": 3
+      },
+      {
+        "giorno": "2026-11-12",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-11-13",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-11-14",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-11-15",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-11-16",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-11-17",
+        "valore": 1
+      },
+      {
+        "giorno": "2026-11-18",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-19",
+        "valore": 0
+      },
+      {
+        "giorno": "2026-11-20",
+        "valore": 0
+      }
+    ]
+  },
+  "account_settimane": [
+    {
+      "dal": "2026-11-13",
+      "al": "2026-11-20",
+      "reach": 4,
+      "views": 10,
+      "accounts_engaged": 1,
+      "total_interactions": 2,
+      "likes": 1,
+      "comments": 1,
+      "shares": 0,
+      "saves": 0,
+      "replies": 0,
+      "profile_links_taps": 0
+    },
+    {
+      "dal": "2026-11-06",
+      "al": "2026-11-13",
+      "reach": 4,
+      "views": 62,
+      "accounts_engaged": 0,
+      "total_interactions": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "replies": 0,
+      "profile_links_taps": 0
+    },
+    {
+      "dal": "2026-10-30",
+      "al": "2026-11-06",
+      "reach": 1,
+      "views": 2,
+      "accounts_engaged": 0,
+      "total_interactions": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "replies": 0,
+      "profile_links_taps": 0
+    },
+    {
+      "dal": "2026-10-23",
+      "al": "2026-10-30",
+      "reach": 3,
+      "views": 20,
+      "accounts_engaged": 0,
+      "total_interactions": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "replies": 0,
+      "profile_links_taps": 0
+    }
+  ],
+  "account_dettagli_28gg": {
+    "reach_per_follow_type": {
+      "value": 10,
+      "breakdowns": [
+        {
+          "dimension_keys": [
+            "follow_type"
+          ],
+          "results": [
+            {
+              "dimension_values": [
+                "FOLLOWER"
+              ],
+              "value": 2
+            },
+            {
+              "dimension_values": [
+                "NON_FOLLOWER"
+              ],
+              "value": 8
+            }
+          ]
+        }
+      ]
+    },
+    "reach_per_media_product_type": {
+      "value": 10,
+      "breakdowns": [
+        {
+          "dimension_keys": [
+            "media_product_type"
+          ],
+          "results": [
+            {
+              "dimension_values": [
+                "STORY"
+              ],
+              "value": 2
+            },
+            {
+              "dimension_values": [
+                "CAROUSEL_CONTAINER"
+              ],
+              "value": 10
+            }
+          ]
+        }
+      ]
+    },
+    "views_per_follow_type": {
+      "value": 94,
+      "breakdowns": [
+        {
+          "dimension_keys": [
+            "follow_type"
+          ],
+          "results": [
+            {
+              "dimension_values": [
+                "FOLLOWER"
+              ],
+              "value": 48
+            },
+            {
+              "dimension_values": [
+                "NON_FOLLOWER"
+              ],
+              "value": 46
+            }
+          ]
+        }
+      ]
+    },
+    "total_interactions_per_media_product_type": {
+      "value": 2,
+      "breakdowns": [
+        {
+          "dimension_keys": [
+            "media_product_type"
+          ],
+          "results": [
+            {
+              "dimension_values": [
+                "POST"
+              ],
+              "value": 2
+            }
+          ]
+        }
+      ]
+    },
+    "profile_links_taps_per_contact_button_type": {
+      "value": 0,
+      "breakdowns": [
+        {
+          "dimension_keys": [
+            "contact_button_type"
+          ]
+        }
+      ]
+    }
+  },
+  "demografia": {},
+  "follower_online": [],
+  "post": [
+    {
+      "id": "18119441726026992",
+      "pubblicato": "2026-11-20T12:30:55+01:00",
+      "giorno_settimana": "Friday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/Df9jZNKF8Sg/",
+      "caption": "Ti innamori del terrazzo. E dentro com'è? 🌿\n\nHai già immaginato le cene all'aperto. Ora immagina il lunedì: cucinare, dormire, lavorare, mettere via le cose. Il dettaglio che ami non deve farti saltare il resto della casa.\n\nPrima chiediti come useresti davvero lo spazio fuori:\n🔹 Per sederti: prova ingombri, passaggi e apertura della porta.\n🔹 Per mangiare: pensa al percorso dalla cucina al tavolo.\n🔹 Per avere privacy: guarda gli affacci vicini e come ti senti lì.\n\nE attenzione: è un extra o una priorità? Se lo useresti ogni tanto, non deve farti trascurare ciò che ti serve ogni giorno. Se lo us",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 0,
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18132496552691664",
+      "pubblicato": "2026-11-18T12:31:12+01:00",
+      "giorno_settimana": "Wednesday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/Df4Z1Nlk94I/",
+      "caption": "Dieci case viste. La cucina era nella prima o nella terza? 🤔\n\nDopo qualche visita la memoria fa collage: la cucina di una casa, il balcone di un'altra, la sensazione dell'ultima. Una nota scritta subito vale più di un ricordo ricostruito.\n\nPrima di andare via, cinque minuti e tre righe:\n1️⃣ Mi ha convinto: un elemento concreto, con il motivo.\n2️⃣ Mi fa esitare: un limite che hai visto, senza cancellarlo per entusiasmo.\n3️⃣ Devo verificare: la domanda rimasta aperta e a chi farla.\n\nE attenzione: tieni separati i fatti dalle impressioni. \"La camera affaccia qui\" è un dettaglio che puoi ritrovare",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 0,
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "17968879155212706",
+      "pubblicato": "2026-11-16T12:30:46+01:00",
+      "giorno_settimana": "Monday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DfzQMmkFwy7/",
+      "caption": "\"Terzo piano con ascensore.\" Sembra già tutto chiaro. Poi trovi i gradini prima dell'ascensore, una porta stretta o l'ultimo tratto a piedi. 🏢\n\nIl piano è un numero. Il percorso è quello che fai davvero ogni giorno. La visita comincia prima della porta: dal marciapiede al portone, dall'ingresso al pianerottolo.\n\nE attenzione: \"con ascensore\" è un'informazione da approfondire. Ci sono gradini prima o dopo? Dove si ferma?\n\nProva il percorso pensando a cose normali:\n🔹 Le borse della spesa: dove le appoggi e quali porte apri.\n🔹 Ciò che usi spesso: bici, passeggino o oggetti ingombranti, con le mis",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 1,
+        "views": 1,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18108775463365359",
+      "pubblicato": "2026-11-14T10:01:09+01:00",
+      "giorno_settimana": "Saturday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/Dft1ejgl6CP/",
+      "caption": "Visiti alle 11, c'è il sole e ti innamori. Ma alle 17, quando torni dal lavoro, com'è? ☀️\n\nLa luce della visita è un momento. La tua giornata ne ha molti altri. Pensa a quando userai davvero soggiorno, cucina e spazio di lavoro.\n\nGuarda cosa c'è davanti alle finestre:\n🔹 Edifici e balconi: possono cambiare il modo in cui entra la luce.\n🔹 Alberi e altri ostacoli: osservali, non fermarti alla direzione dell'affaccio.\n🔹 Aperture della stanza: contano anche posizione e profondità dell'ambiente.\n\nE attenzione: una stanza luminosa e una stanza con il sole diretto non sono la stessa cosa. Con luce dif",
+      "like": 1,
+      "commenti": 1,
+      "insights": {
+        "reach": 3,
+        "views": 5,
+        "likes": 1,
+        "comments": 1,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 2,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18393721825232849",
+      "pubblicato": "2026-11-12T12:31:01+01:00",
+      "giorno_settimana": "Thursday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/Dfo9C6NF3Fk/",
+      "caption": "\"Luminoso, spazioso, ben collegato.\" Potrebbe essere casa tua. O quasi qualsiasi altra. 📝\n\nIl tuo annuncio parla a tutti, e quindi a nessuno. Gli aggettivi non fanno vedere: chi legge deve ancora capire dove entra la luce, come sono distribuiti gli ambienti e cosa rende la casa interessante.\n\nScegli tre punti forti veri:\n🔹 Lo spazio: un ambiente o una distribuzione da mostrare.\n🔹 Il contesto: un servizio o un percorso descritto con precisione.\n🔹 La particolarità: un dettaglio utile che distingue la tua casa.\n\nE attenzione: \"Ampia zona giorno\" fa immaginare a ognuno uno spazio diverso dal tuo. ",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 2,
+        "views": 3,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "17941646727380783",
+      "pubblicato": "2026-11-10T12:31:02+01:00",
+      "giorno_settimana": "Tuesday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DfjzdQMFzjJ/",
+      "caption": "Valigie, aspirapolvere, stendino. Nelle foto degli annunci non ci sono mai. Dopo il trasloco sì. 📦\n\nIl ripostiglio non si nota finché manca. Prima di contare le stanze, conta le cose che devi sistemare: scorte, attrezzi, cambio stagione.\n\nNon tutto va nello stesso posto:\n🔹 Quello che usi ogni giorno: deve essere facile da prendere e rimettere via.\n🔹 Quello che usi ogni tanto: può stare meno a portata di mano.\n🔹 Quello che ingombra: controlla altezza, profondità e accesso.\n\nE attenzione: c'è spazio non vuol dire che sia comodo. Un armadio profondo contiene tanto, ma a volte devi svuotarlo per a",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 4,
+        "views": 6,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "17955416595295237",
+      "pubblicato": "2026-11-08T19:31:01+01:00",
+      "giorno_settimana": "Sunday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DffZ6-ul-kA/",
+      "caption": "Stai vendendo la casa in cui abiti e le visite ti stanno sconvolgendo le giornate? 🗓️\n\n\"Potete venire quando volete\" è una frase generosa. Finché gli appuntamenti non iniziano a incastrarsi con lavoro, figli e giornate storte.\n\nDisponibili non significa sempre. Prima di aprire le visite, decidi tre cose:\n1️⃣ Quanto preavviso ti serve? Un margine realistico per prepararti.\n2️⃣ Chi apre la casa? Presenza, chiavi e un recapito operativo.\n3️⃣ Come si conferma? Come gestire conferme e cambi di programma.\n\nE attenzione ai cambi di programma: un messaggio mandato \"a chi capita\" può non arrivare a tut",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 3,
+        "views": 7,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "17918170311537332",
+      "pubblicato": "2026-11-06T12:31:36+01:00",
+      "giorno_settimana": "Friday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DfZgVqTGMCV/",
+      "caption": "Bella casa. Ma il tuo tragitto di ogni giorno com'è? 🚌\n\nUna strada tranquilla la domenica della visita può cambiare del tutto quando vai al lavoro o accompagni i bambini.\n\nIl tragitto comincia quando chiudi la porta, non dal nome del quartiere. Per questo, prima di scegliere, prova il giro completo:\n🔹 L'andata: esci all'orario abituale e raggiungi la destinazione.\n🔹 Il rientro: controlla cosa cambia nel verso opposto.\n🔹 L'imprevisto: pioggia, spesa, ritardi o un cambio saltato.\n\nE attenzione: due case nello stesso quartiere possono darti giornate diverse. Una ha un mezzo diretto ma più strada ",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 2,
+        "views": 2,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18129274523510773",
+      "pubblicato": "2026-11-04T12:52:39+01:00",
+      "giorno_settimana": "Wednesday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DfUZJ8LGPb0/",
+      "caption": "Il divano entra nella parete. Poi apri la porta, sposti una sedia… e scopri il problema. 📐\n\nLa stanza vuota sembra sempre enorme. Poi arrivano divano, tavolo, sedie e mobile TV, e il problema compare nello spazio rimasto tra un mobile e l'altro.\n\nQuando vai a vedere una casa, porta queste misure:\n🔹 I mobili che vuoi tenere: ingombro reale, comprese ante e parti apribili.\n🔹 Le pareti utilizzabili: considera porte, finestre e termosifoni.\n🔹 Gli spazi di movimento: prova sedie, ante e passaggi insieme.\n\nE attenzione: \"ci sta\" non vuol dire \"funziona\". Sulla piantina il tavolo entra; nella vita qu",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 2,
+        "views": 2,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18120403049283409",
+      "pubblicato": "2026-11-02T14:01:07+01:00",
+      "giorno_settimana": "Monday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DfPXZ1ljSLJ/",
+      "caption": "Ti scrivono per avere informazioni sulla casa, fissi la visita… e poi spariscono? 🏠\n\nSpesso il problema non è la casa, ma quello che succede prima dell'appuntamento.\n\nUn annuncio chiaro risponde già alle prime domande:\n🔹 Piano e ascensore.\n🔹 Spese e stato della casa.\n🔹 Disponibilità e tempi di consegna.\nSe manca un'informazione decisiva, la richiesta può fermarsi lì.\n\nPoi, prima di fissare la visita, servono tre domande:\n1️⃣ Che esigenza vuoi risolvere? Spazi, zona, caratteristiche essenziali.\n2️⃣ Quali tempi hai? Per comprare e per entrare in casa.\n3️⃣ Il prezzo rientra nel budget? Per capire",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 2,
+        "views": 2,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18119114918276798",
+      "pubblicato": "2026-10-31T18:28:44+01:00",
+      "giorno_settimana": "Saturday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DfKsczRjc2H/",
+      "caption": "Nell’annuncio c’è scritto “ristrutturata”. Ma cosa è stato rifatto, esattamente? 🔨\n\nBagno nuovo e pavimenti in ordine si vedono subito. Quello che non si vede va chiesto e verificato.\n\nPrima di fare un’offerta, guarda oltre le finiture:\n\n🔹 Pavimenti e rivestimenti: dicono com’è finita la casa, non com’è fatta dentro.\n🔹 Impianti: elettrico, idrico, gas e riscaldamento. Quali sono stati rifatti davvero?\n🔹 Infissi: controlla tipo, epoca e condizioni.\n🔹 Pareti spostate: fai confrontare lo stato reale con i documenti. La planimetria da sola non basta.\n\nE attenzione: “ristrutturata” da sola non dice",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 2,
+        "views": 3,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "17927617437428728",
+      "pubblicato": "2026-10-29T21:23:38+01:00",
+      "giorno_settimana": "Thursday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DfF24CeDbAT/",
+      "caption": "Stai per mettere in vendita casa e pensi di dover rifare tutto prima delle foto? 📸\n\nSpesso non serve una ristrutturazione. Serve che chi guarda l'annuncio capisca subito gli ambienti.\n\nPrima del servizio fotografico, parti da qui:\n\n🔹 Passaggi: libera corridoi e porte, la stanza deve farsi capire.\n🔹 Superfici: alleggerisci piani di cucina, tavoli e mensole.\n🔹 Oggetti temporanei: bucato, scatoloni e cavi vanno fuori dall'inquadratura.\n🔹 Luce: vetri puliti, tende leggere e lampadine tutte funzionanti, con la stessa luce.\n\nE attenzione: un grande intervento va valutato con calma. Costi, tempi e ri",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 2,
+        "views": 2,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18373145692214860",
+      "pubblicato": "2026-10-28T12:46:44+01:00",
+      "giorno_settimana": "Wednesday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DfCW7TYje_7/",
+      "caption": "Affaccio interno o sulla strada? L’etichetta da sola non ti dice come vivrai la casa.\n\nAscolta con le finestre aperte e chiuse, guarda dove si trovano camere e soggiorno, osserva gli edifici di fronte e gli eventuali impianti o attività vicine. Se puoi, torna in un altro momento della giornata.\n\nIl punto non è scegliere un vincitore universale: è capire quale affaccio funziona per il tuo sonno, il lavoro da casa e le tue abitudini.\n\nMandalo alla persona con cui stai cercando casa.\n\nImmagini generate a scopo illustrativo: non rappresentano un indirizzo specifico né garantiscono condizioni di lu",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 2,
+        "views": 2,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18435218119177994",
+      "pubblicato": "2026-10-27T19:53:03+01:00",
+      "giorno_settimana": "Tuesday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DfAi63LjfVq/",
+      "caption": "80 m² nell’annuncio. Prima di confrontarli con quelli di un’altra casa, chiedi che cosa comprendono.\n\nSuperficie commerciale, calpestabile e catastale rispondono a criteri diversi. Anche balconi e altri accessori possono concorrere al dato commerciale con un peso diverso dagli interni.\n\nPoi c’è la distribuzione: passaggi, forma delle stanze e posizione delle aperture possono cambiare molto il modo in cui userai lo spazio.\n\nLa domanda da portare alla prossima visita è semplice: come sono stati calcolati questi metri e quali sono le misure interne?\n\nSalvalo prima di confrontare due case.\n\nDefini",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 3,
+        "views": 3,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18339564586258182",
+      "pubblicato": "2026-10-26T20:21:01+01:00",
+      "giorno_settimana": "Monday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/De-BU0_kR-4/",
+      "caption": "“La metto più alta, tanto trattano.” Prima di scegliere questa strada, guarda cosa succede dal lato di chi cerca.\n\nUn prezzo oltre il budget impostato può escludere l’annuncio dai risultati. E quando la casa compare, viene confrontata con le alternative disponibili a quella cifra.\n\nPer questo il posizionamento va ragionato su immobili comparabili, riscontri di vendita quando disponibili e segnali raccolti durante la promozione. Nessuna percentuale magica e nessuna promessa sui tempi.\n\nL’esempio 300.000/329.000 € è illustrativo: non è la valutazione di un immobile.\n\nMandalo a chi sta per metter",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 3,
+        "views": 3,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18024359195712470",
+      "pubblicato": "2026-10-25T20:20:55+01:00",
+      "giorno_settimana": "Sunday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/De7chOaDTYO/",
+      "caption": "800 € di rata sembrano sostenibili. Ma quanto ti resta davvero a fine mese? 🏠\n\nPrima di innamorarti di una casa, fai un conto semplice:\n➡️ parti dalle entrate stabili, non da bonus e straordinari\n➡️ togli rata, spese quotidiane, condominio, utenze e altre rate\n➡️ guarda il margine che resta: deve coprire risparmio, spese annuali e imprevisti\n\nE occhio alla durata: allungare il mutuo abbassa la rata, ma fa crescere gli interessi totali. Su 150.000 € al 3%, passare da 20 a 30 anni fa risparmiare circa 200 € al mese, ma costa circa 28.000 € di interessi in più.\n\nIl “terzo dello stipendio” è un pu",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 3,
+        "views": 4,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18413210119090216",
+      "pubblicato": "2026-10-24T20:37:30+02:00",
+      "giorno_settimana": "Saturday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/De4ywaaDZsq/",
+      "caption": "La tua casa ha un punto forte. La prima foto lo mostra?\n\nChi cerca casa scorre decine di annunci e decide in un secondo se aprirne uno. Quel secondo lo decide la prima immagine.\n\nUn’inquadratura stretta fa vedere un tavolo. Una più ampia fa capire come si vive il soggiorno. E se il vero punto forte è la luce, lo spazio o un bel terrazzo, forse è proprio da lì che dovrebbe partire l’annuncio.\n\nUna regola però vale sempre: la visita deve confermare le foto. Niente grandangoli che allargano le stanze, niente difetti cancellati.\n\nFai la prova: apri il tuo annuncio e guarda solo la prima foto. Si c",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 3,
+        "views": 5,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18178286083388891",
+      "pubblicato": "2026-10-23T21:05:15+02:00",
+      "giorno_settimana": "Friday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/De2RItojbeZ/",
+      "caption": "Marconi o Portuense? 🤔 Prima di scegliere la casa, prova la tua giornata.\n\nDue zone vicine, due modi diversi di vivere Roma. Scorri per vedere prezzi medi, collegamenti e tipo di case di ciascuna.\n\nMa il dato che conta di più è il tuo: 20 minuti in più a tratta sono oltre 3 ore a settimana. Per questo:\n🕗 Rifai il tragitto all’ora in cui esci davvero, non di domenica\n🚌 Usa il mezzo che userai ogni giorno, porta a porta\n🚶 Conta quanto cammini fino alla fermata\n🌙 Torna nella via anche la sera\n\n📤 Mandalo a chi sta cercando casa con te.\n💬 Cerchi tra Marconi e Portuense? Scrivici in DM.\n\n#roma #marc",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 4,
+        "views": 5,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18115234466143530",
+      "pubblicato": "2026-10-22T09:33:07+02:00",
+      "giorno_settimana": "Thursday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DeydIjijbM9/",
+      "caption": "La casa ti piace. Ma sei pronto a firmare? ✍️\n\nPrima della proposta d’acquisto, l’emozione rischia di farti saltare le domande più importanti. Eccone 4 da fare sempre:\n\n📄 I documenti – La casa è regolare anche sulla carta? La sola planimetria catastale non basta.\n💶 Le spese – Quanto costa davvero il condominio? Chiedi rendiconto, verbali e lavori già deliberati.\n🔑 I tempi – Quando avrai davvero le chiavi? Rogito e consegna possono non coincidere.\n🏦 Il mutuo – E se la banca dice no? Valuta una condizione sospensiva scritta, con termini e importo chiari.\n\nUna proposta firmata con leggerezza può ",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 4,
+        "views": 5,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 2,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "17996703638868024",
+      "pubblicato": "2026-10-21T11:54:21+02:00",
+      "giorno_settimana": "Wednesday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DewIgHYDRqg/",
+      "caption": "30.000 € di sconto. Hai comprato bene? 🏷️\n\nUno sconto grande dà soddisfazione, ma da solo non dice se hai fatto un buon acquisto. Facciamo un esempio con due case equivalenti:\n\n🔹 Casa A: richiesta 360.000 €, sconto 30.000 €, paghi 330.000 €\n🔹 Casa B: richiesta 325.000 €, sconto 10.000 €, paghi 315.000 €\n\nLo sconto più grande ti costa 15.000 € in più.\n\nPrima di chiedere «quanto scende?», chiediti quanto vale. Confronta immobili davvero simili per zona, metratura, piano, stato e affacci, poi valuta il prezzo finale e il costo complessivo dell’acquisto.\n\n👉 Lo sconto si misura sulla richiesta. La ",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 4,
+        "views": 4,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "17913795717494673",
+      "pubblicato": "2026-10-20T19:50:48+02:00",
+      "giorno_settimana": "Tuesday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DeuaO4_DRoq/",
+      "caption": "Prima visita? Guarda oltre l’arredamento. 🏠\n\nUna casa vuota e luminosa colpisce subito, ma l’emozione della prima visita può nascondere dettagli importanti. Ecco cosa osservare prima di immaginarti già dentro.\n\n👀 Durante la visita\n🔹 Luce: come sono esposte le stanze? Se puoi, torna in un altro orario.\n🔹 Rumori: fermati ad ascoltare, con le finestre aperte e chiuse.\n🔹 Stato: guarda infissi, impianti e pareti. Cerca segni di umidità.\n\n📏 Gli spazi: una stanza vuota sembra più grande di quanto sarà arredata. Porta un metro e le misure dei mobili essenziali.\n\n❓ Prima di salutare: chiedi delle spese",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 5,
+        "views": 9,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18175469416454173",
+      "pubblicato": "2026-10-19T19:09:19+02:00",
+      "giorno_settimana": "Monday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DerwsHKjSYg/",
+      "caption": "Stai vendendo casa, le visite arrivano ma le offerte no? 🏠\n\nPrima di abbassare il prezzo, bisogna capire cosa sta frenando chi entra in casa tua.\n\nDi solito il motivo è uno di questi:\n\n🔹 Prezzo: non è in linea con case simili per zona, piano e condizioni.\n🔹 Aspettative: foto e annuncio promettono più di quello che si vede alla visita.\n🔹 Dubbi: l’acquirente esce con domande a cui nessuno ha risposto.\n\nE attenzione: due case nella stessa via, con gli stessi metri, possono valere cifre diverse. Piano, ascensore, stato interno, affacci e luce cambiano tutto.\n\nPer questo dopo ogni visita facciamo n",
+      "like": 1,
+      "commenti": 0,
+      "insights": {
+        "reach": 6,
+        "views": 36,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 1,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    },
+    {
+      "id": "18114801218017833",
+      "pubblicato": "2026-10-18T20:30:46+02:00",
+      "giorno_settimana": "Sunday",
+      "tipo": "CAROUSEL_ALBUM",
+      "formato": "FEED",
+      "link": "https://www.instagram.com/p/DepVN2IDSLo/",
+      "caption": "Casa da 350.000 €: bastano davvero 70.000 € da parte?\nCon un mutuo ipotizzato di 280.000 €, i 70.000 € coprono soltanto la parte di prezzo che resta a tuo carico. Vanno poi aggiunti imposte, notaio, compenso dell’agenzia e costi del mutuo.\nNel nostro esempio, ipotizzando 22.000 € di spese aggiuntive, la liquidità necessaria arriva a 92.000 €. Prima ancora di considerare arredi, eventuali lavori e una riserva per gli imprevisti.\nE se la perizia fosse più bassa del prezzo concordato? Anche l’importo finanziabile potrebbe diminuire, aumentando la somma da coprire con i tuoi risparmi.\nPrima delle ",
+      "like": 0,
+      "commenti": 0,
+      "insights": {
+        "reach": 6,
+        "views": 32,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saved": 0,
+        "total_interactions": 0,
+        "profile_visits": 0,
+        "follows": 0,
+        "profile_activity": 0
+      }
+    }
+  ],
+  "errori": []
+}
